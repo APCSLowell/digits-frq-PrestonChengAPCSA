@@ -22,16 +22,12 @@ public class Digits
 
 	public boolean isStrictlyIncreasing()
 	{ /* to be implemented in part (b) */
-		int value = false;
-		for(int i = 0; i < digitsList.length-1; i++){
-			if(digitsList.get(i) < digits.get(i+1)){
-				value = true;
-			} else {
-				value = false;
+		for(int i = 0; i < digitsList.size()-1; i++){
+			if(digitsList.get(i) >= digitsList.get(i+1)){
+				return false;
 			}
-		}	
-
-		return value;
+		}
+		return true;
 	}
 	
 	public String toString()
